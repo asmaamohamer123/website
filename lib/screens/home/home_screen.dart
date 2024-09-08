@@ -8,9 +8,12 @@ class HomeScreens extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<Website> _websites = [
-      Website('شئون الطلاب', 'https://www.google.com', "assets/images/logo.png"),
-      Website('جوجل', 'https://www.google.com', "assets/images/logo.png"),
-      // أضف مواقع أخرى هنا
+      Website('شئون الطلاب', 'https://www.google.com', "assets/images/students.jfif"),
+      Website('الارشيف الالكتروني', 'https://www.google.com', "assets/images/archive.jpg"),
+      Website('خدمات الدراسات العليا', 'https://www.google.com', "assets/images/master.jfif"),
+      Website('رعاية الشباب', 'https://www.google.com', "assets/images/care.png"),
+      Website('ادارة المحتوي', 'https://www.google.com', "assets/images/cms.webp"),
+      // Add more websites here
     ];
 
     return Directionality(
@@ -20,45 +23,38 @@ class HomeScreens extends StatelessWidget {
           slivers: [
             const SliverToBoxAdapter(
               child: AppBarWidge(
-              //  title: " ",
                 imagePath: "assets/images/logo.png",
                 nameUser: "كليه الحاسبات والذكاء الاصطناعي",
-              
               ),
             ),
-
-            
             SliverList(
               delegate: SliverChildBuilderDelegate(
                 (context, index) {
                   return GestureDetector(
                     onTap: () async {
                       final url = _websites[index].url;
-                     // if (await canLaunch(url)) {
-                     try{
-                        
+                      try {
                         await launch(url);
-                        }
-                        catch(e){
-                          ScaffoldMessenger.of(context).showSnackBar(
-                       SnackBar(content: Text('Could not launch $url')),
-                              );
-                        }
-                           },
-                    //  } else {
-                       // throw 'Could not launch $url';
-                       //ScaffoldMessenger.of(context).showSnackBar(
-                       //SnackBar(content: Text('Could not launch $url')),
-                              // );
-                             //  print(url);
-                     // }
-                 
-                    
+                      } catch (e) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('Could not launch $url')),
+                        );
+                      }
+                    },
                     child: Padding(
-                       padding: const EdgeInsets.only(top: 0, left: 0, right: 0, bottom: 25) ,
-                      child: ListTile(
-                        leading: Image.asset(_websites[index].imageUrl),
-                        title: Text(_websites[index].name),
+                      padding: const EdgeInsets.all(10.0),
+                      child: Card(
+                        elevation: 5,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: ListTile(
+                          leading: CircleAvatar(
+                            backgroundImage: AssetImage(_websites[index].imageUrl),
+                            radius: 30, // You can adjust the size of the circle
+                          ),
+                          title: Text(_websites[index].name),
+                        ),
                       ),
                     ),
                   );
