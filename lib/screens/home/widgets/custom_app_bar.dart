@@ -17,7 +17,7 @@ class AppBarWidge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 0, left: 0, right: 0, bottom: 40) ,
+      padding: const EdgeInsets.only(top: 0, left: 0, right: 0, bottom: 20) ,
       child: Container(
         height: MediaQuery.sizeOf(context).height * .2,
         width: MediaQuery.sizeOf(context).width ,

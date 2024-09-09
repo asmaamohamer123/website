@@ -13,7 +13,9 @@ class HomeScreens extends StatelessWidget {
       Website('خدمات الدراسات العليا', 'https://fcipost.fayoum.edu.eg', "assets/images/master.jfif"),
       Website('رعاية الشباب', 'https://www.google.com', "assets/images/care.png"),
       Website('ادارة المحتوي', 'https://www.google.com', "assets/images/cms.webp"),
-      Website('  الدكتور', 'https://www.google.com', "assets/images/splash.png"),
+      Website('الدكتور', 'doctor://open', "assets/images/splash.png"),
+      Website('الطالب', 'student://open', "assets/images/stu.png"),
+      Website('الخريطة',  'fcimap://open', "assets/images/map.png"),
 
       // Add more websites here
     ];
@@ -53,7 +55,7 @@ class HomeScreens extends StatelessWidget {
                         child: ListTile(
                           leading: CircleAvatar(
                             backgroundImage: AssetImage(_websites[index].imageUrl),
-                            radius: 30, // You can adjust the size of the circle
+                            radius: 25, // You can adjust the size of the circle
                           ),
                           title: Text(_websites[index].name),
                         ),
