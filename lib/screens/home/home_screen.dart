@@ -13,6 +13,8 @@ class HomeScreens extends StatelessWidget {
       Website('خدمات الدراسات العليا', 'https://fcipost.fayoum.edu.eg', "assets/images/master.jfif"),
       Website('رعاية الشباب', 'https://www.google.com', "assets/images/care.png"),
       Website('ادارة المحتوي', 'https://www.google.com', "assets/images/cms.webp"),
+      Website('  الدكتور', 'https://www.google.com', "assets/images/splash.png"),
+
       // Add more websites here
     ];
 
