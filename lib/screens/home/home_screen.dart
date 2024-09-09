@@ -8,9 +8,9 @@ class HomeScreens extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<Website> _websites = [
-      Website('شئون الطلاب', 'https://www.google.com', "assets/images/students.jfif"),
+      Website('شئون الطلاب', 'https://fcaisys.fayoum.edu.eg', "assets/images/students.jfif"),
       Website('الارشيف الالكتروني', 'https://www.google.com', "assets/images/archive.jpg"),
-      Website('خدمات الدراسات العليا', 'https://www.google.com', "assets/images/master.jfif"),
+      Website('خدمات الدراسات العليا', 'https://fcipost.fayoum.edu.eg', "assets/images/master.jfif"),
       Website('رعاية الشباب', 'https://www.google.com', "assets/images/care.png"),
       Website('ادارة المحتوي', 'https://www.google.com', "assets/images/cms.webp"),
       // Add more websites here
