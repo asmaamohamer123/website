@@ -12,16 +12,18 @@ class HomeScreens extends StatelessWidget {
       //"webs and apps ""
 
       Website('شئون الطلاب', 'https://fcaisys.fayoum.edu.eg', "assets/images/students.jfif"),
+       
       Website('المكتبه',  'https://smartlib.fayoum.edu.eg', "assets/images/library.jfif"),
       Website('خدمات الدراسات العليا', 'https://fcipost.fayoum.edu.eg', "assets/images/master.jfif"),
       Website('رعاية الشباب', 'http://10.200.100.89:4000', "assets/images/care.png"),
       
-       Website('الارشيف الالكتروني', 'https://www.google.com', "assets/images/archive.jpg"),
+       Website('الارشيف الالكتروني', 'http://10.200.100.89:3000/categories', "assets/images/archive.jpg"),
        Website('ادارة المحتوي', 'https://www.google.com', "assets/images/cms.webp"),
       
       Website('الدكتور', 'doctor://open', "assets/images/splash.png"),
       Website('الطالب', 'student://open', "assets/images/stu.png"),
       Website('الخريطة',  'fcimap://open', "assets/images/map.png"),
+      Website('الغياب',  'attendance://open', "assets/images/at.jfif"),
 
 
       // Add more websites here
