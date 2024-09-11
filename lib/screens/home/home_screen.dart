@@ -10,18 +10,22 @@ class HomeScreens extends StatelessWidget {
     
     final List<Website> _websites = [
       //"webs and apps ""
+
       Website('شئون الطلاب', 'https://fcaisys.fayoum.edu.eg', "assets/images/students.jfif"),
-      Website('الارشيف الالكتروني', 'https://www.google.com', "assets/images/archive.jpg"),
+      Website('المكتبه',  'https://smartlib.fayoum.edu.eg', "assets/images/library.jfif"),
       Website('خدمات الدراسات العليا', 'https://fcipost.fayoum.edu.eg', "assets/images/master.jfif"),
-      Website('رعاية الشباب', 'https://www.google.com', "assets/images/care.png"),
-      Website('ادارة المحتوي', 'https://www.google.com', "assets/images/cms.webp"),
+      Website('رعاية الشباب', 'http://10.200.100.89:4000', "assets/images/care.png"),
+      
+       Website('الارشيف الالكتروني', 'https://www.google.com', "assets/images/archive.jpg"),
+       Website('ادارة المحتوي', 'https://www.google.com', "assets/images/cms.webp"),
+      
       Website('الدكتور', 'doctor://open', "assets/images/splash.png"),
       Website('الطالب', 'student://open', "assets/images/stu.png"),
       Website('الخريطة',  'fcimap://open', "assets/images/map.png"),
 
+
       // Add more websites here
     ];
-
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
